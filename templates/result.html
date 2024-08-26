@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re-Carz - Second Hand Car Prices</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* Light gray background */
+      background-image: url('https://www.thecartell.lu/wp-content/uploads/2019/06/00d-Kaida-2017-Nissan-GTR.jpg');
+      background-size: contain;
+      background-position: center;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #333; /* Dark background for header */
+      color: white;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 40px; /* Decreased font size */
+      color: #FFD700; /* Gold color for logo */
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-links li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+    main {
+      padding: 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+      position: relative; /* Adding relative positioning */
+    }
+
+    .result-section {
+      background-image: url('https://media.istockphoto.com/id/660109000/vector/vector-illustration-red-car-with-bow-flat-style-on-white-background-concept-design-gift.jpg?s=612x612&w=0&k=20&c=yMyVpth4R9rDUtkUHAhNByA0XtJEV2_iITRzjTVGFbc=');
+      background-size: contain;
+      background-position: bottom;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .result-section h2 {
+      color: #ff0000f8;
+      font-size: 27px;
+    }
+
+    .result-section p {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+
+    /* Highlight the price result */
+    #price-result {
+      font-weight: bold;
+      font-size: 32px;
+      background-color: #fac31d;
+      color: rgb(231, 2, 174);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #f28d01;
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #FFA500;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fefefe;
+    }
+
+    /* Car animation styles */
+    .car {
+      position: absolute;
+      top: 30%;
+      width: 150px; /* Adjust size */
+      height: auto;
+      animation: carAnimation 5s linear infinite alternate;
+    }
+
+    @keyframes carAnimation {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Re-Carz</h1>
+      <nav>
+        <li><a href="/check" style="color: white;">Know Your Car Price</a></li>
+        <li><a href="/contact" style="color: white;">Contact Us</a></li>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="result-section">
+        <img src="https://i.pinimg.com/originals/91/6f/d1/916fd1872e3ce606dc17133f356d613d.gif" alt="Car" class="car">
+        <h2>Re-Carz Special Price</h2>
+        <p>Your car's predicted price is:</p>
+        <p id="price-result">{{ car_price }}</p> <!-- Price result highlighted here -->
+        <a href="/" class="btn">Home</a>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Re-Carz. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re-Carz - Second Hand Car Prices</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* Light gray background */
+      background-image: url('https://st2.depositphotos.com/1826664/5444/i/450/depositphotos_54440289-stock-photo-contact-us-background-pattern-blue.jpg');
+      background-size: center;
+      background-position: center;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #333; /* Dark background for header */
+      color: white;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 40px; /* Decreased font size */
+      color: #FFD700; /* Gold color for logo */
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-links li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background-image: url('https://www.shutterstock.com/image-photo/white-popular-contact-web-icons-600nw-1617540217.jpg');
+      background-size: contain;
+      background-position: center;
+      color: rgb(116, 10, 255);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .contact-form {
+      background: linear-gradient(135deg, #e6345b, #0171f2); /* Gradient background */
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1s ease;
+      position: relative;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: calc(100% - 35px);
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 17px;
+      border: 1px solid #ed3761e8;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      outline: none;
+      border-color: #F28D01;
+    }
+
+    .contact-form textarea {
+      resize: none;
+    }
+
+    .contact-form .btn {
+      display: block;
+      width: 95%;
+      background-color: #0171f2;
+      color: #fff;
+      padding: 15px;
+      font-weight: bold;
+      font-size: 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form .btn:hover {
+      background-color: #FFA500;
+    }
+
+    .country-select {
+      background-color: #cde1f7;
+      font-weight: bold;
+      font-size: 25px;
+    }
+
+    .icon-left {
+      position: absolute;
+      top: 20%;
+      transform: translateY(-50%);
+      left: -190px;
+      width: 200px;
+      height: 200px;
+    }
+
+    .icon-right {
+      position: absolute;
+      top: 70%;
+      transform: translateY(-50%);
+      right: -180px;
+      width: 150px;
+      height: 150px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fefefe;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form {
+        width: 90%;
+        padding: 25px;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Re-Carz</div>
+      <ul class="nav-links">
+        <li><a href="/check" style="color: white;">Know Your Car Price</a></li>
+        <li><a href="/contact" style="color: white;">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Contact Us</h1>
+    </div>
+  </header>
+  <main>
+    <div class="contact-form">
+      <img src="https://static.vecteezy.com/system/resources/previews/017/349/943/original/24-hour-service-icon-headphone-talk-support-over-the-phone-to-consult-customer-problems-png.png" alt="Left Icon" class="icon-left">
+      <form action="/contact" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <select name="country" class="country-select" required>
+          <option value="" selected disabled>Select Your Country</option>
+          <option value="country1">India</option>
+          <option value="country2">France</option>
+          <option value="country3">Japan</option>
+          <option value="country4">USA</option>
+          <option value="country5">UK</option>
+        </select>
+        <input type="text" name="state" placeholder="Your State" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <img src="https://www.clipartmax.com/png/middle/205-2050464_support-dedicated-hosting-service.png" alt="Right Icon" class="icon-right">
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Re-Carz. All rights reserved.</p>
+  </footer>
+</body>
+</html>

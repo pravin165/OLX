@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re-Carz - Second Hand Car Prices</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* Light gray background */
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #333; /* Dark background for header */
+      color: white;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 40px; /* Decreased font size */
+      color: #FFD700; /* Gold color for logo */
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-links li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background-image: url('https://i.makeagif.com/media/6-10-2014/wWg_QC.gif');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: lightcyan;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: lightyellow;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #FFD700; /* Gold color */
+      color: #333; /* Dark text color */
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 25px; /* Rounded button */
+      margin-top: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #C0C0C0; /* Light gray on hover */
+    }
+
+    /* Main Section Styles */
+    .main {
+      padding-top: 50px; /* Adjusted padding-top to accommodate header */
+      background-image: url('https://www.thecartell.lu/wp-content/uploads/2019/06/00d-Kaida-2017-Nissan-GTR.jpg');
+      background-size: contain;
+      background-position: center;
+    } 
+
+    .features {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; /* Allow features to wrap on smaller screens */
+      padding: 20px 0;
+    }
+
+    .feature {
+      text-align: center;
+      margin: 20px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px); /* Move up slightly on hover */
+    }
+
+    .feature h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #f9ee1b;
+    }
+
+    .feature p {
+      font-size: 18px;
+      color: #f8f3f3; /* Gray text color */
+    }
+
+    .feature img {
+      max-width: 140px; /* Limit the maximum width of the image */
+    }
+
+    .select-car-btn {
+      display: inline-block;
+      background-color: #FFD700; /* Gold color */
+      color: #333; /* Dark text color */
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 25px; /* Rounded button */
+      margin-top: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .select-car-btn:hover {
+      background-color: #C0C0C0; /* Light gray on hover */
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333; /* Dark background for footer */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Re-Carz</div>
+      <ul class="nav-links">
+        <li><a href="/check" style="color: white;">Know Your Car Price</a></li>
+        <li><a href="/contact" style="color: white;">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Find Your Dream Car at the Best Price</h1>
+      <p>Discover the perfect second-hand car for you with Re-Carz. Explore our vast inventory of high-quality used vehicles.</p>
+      <a href="/check" class="btn">Get Started</a>
+      <a href="/contact" class="btn" style="margin-left: 10px;">Contact Us</a>
+    </div>
+  </div>
+
+  <main class="main">
+    <section class="features">
+      <div class="feature">
+        <img src="https://cdn.vectorstock.com/i/750p/22/32/best-price-vector-28272232.avif" alt="Icon">
+        <h2>Accurate Pricing</h2>
+        <p>Our advanced algorithms provide accurate pricing for all types of used cars.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn.vectorstock.com/i/750p/80/11/car-sharing-service-concept-vector-29298011.avif" alt="Icon">
+        <h2>Wide Selection</h2>
+        <p>Choose from a wide range of second-hand cars from various brands and models.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.freepik.com/premium-vector/car-vehicle-check-list-inspection-icon-vector-checklist-auto-service-technical-maintenance-flat_101884-2179.jpg" alt="Icon">
+        <h2>Easy to Use</h2>
+        <p>Our intuitive interface makes it easy to find the perfect car that fits your budget and preferences.</p>
+        <a href="/check" class="select-car-btn">Select Car</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Re-Carz. All rights reserved.</p>
+  </footer>
+</body>
+</html>
